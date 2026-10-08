@@ -1,0 +1,72 @@
+/* Esercizio 11 · Soluzione — CSS classico: nessuna utility nell'HTML */
+
+body { background: oklch(97% 0.001 106.424); } /* stone-100 */
+
+.program { max-width: 64rem; margin-inline: auto; padding: 3rem 1rem; }
+@media (width >= 48rem) { .program { padding-inline: 2rem; } }
+
+.program-title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: oklch(21.6% 0.006 56.043); /* stone-900 */
+  margin-bottom: 2rem;
+}
+
+.talks { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1.5rem; }
+@media (width >= 40rem) { .talks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (width >= 64rem) { .talks { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.talk {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.talk-cover {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brand-100);
+  color: var(--color-brand-800);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.talk-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: oklch(55.3% 0.195 38.402); /* orange-700 */
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.talk-body { padding: 1.25rem; }
+
+.talk-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: oklch(21.6% 0.006 56.043); /* stone-900 */
+}
+
+.talk-text { margin-top: 0.25rem; color: oklch(44.4% 0.011 73.639); } /* stone-600 */
+
+.talk-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: oklch(55.3% 0.013 58.071); /* stone-500 */
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  Soluzione · Esercizio 11 · Il CSS in un file a parte
+
+  Tailwind, dal CDN, dà solo il Preflight e, grazie a @theme static, tutte le variabili del
+  tema. style.css è CSS classico, collegato dopo lo script e fuori da ogni layer: usa var()
+  per i token del tema e scrive a mano gli altri valori, media query comprese.
+-->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TW Day 2027 · 11 Il CSS in un file a parte</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Instrument+Serif&display=swap">
+  <style type="text/tailwindcss">
+    @theme static {
+      --color-brand-50:  #f0fdfa;
+      --color-brand-100: #ccfbf1;
+      --color-brand-500: #14b8a6;
+      --color-brand-700: #0f766e;
+      --color-brand-800: #115e59;
+
+      --font-sans: "DM Sans", sans-serif;
+      --font-display: "Instrument Serif", serif;
+      --text-hero: 4.5rem;
+      --radius-card: 1.25rem;
+      --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.12);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="programma" class="program">
+    <h2 class="program-title">Programma</h2>
+    <div class="talks">
+      <article class="talk">
+        <div class="talk-cover">HTML</div>
+        <span class="talk-badge">Nuovo</span>
+        <div class="talk-body">
+          <h3 class="talk-title">Pagine accessibili</h3>
+          <p class="talk-text">Struttura semantica e attributi ARIA, con esempi pratici.</p>
+          <div class="talk-meta">
+            <span>10:00</span>
+            <span>Aula 1</span>
+          </div>
+        </div>
+      </article>
+      <article class="talk">
+        <div class="talk-cover">CSS</div>
+        <div class="talk-body">
+          <h3 class="talk-title">Layout con grid</h3>
+          <p class="talk-text">Dalle colonne alle aree: impaginare senza fatica.</p>
+          <div class="talk-meta">
+            <span>11:30</span>
+            <span>Aula 2</span>
+          </div>
+        </div>
+      </article>
+      <article class="talk">
+        <div class="talk-cover">JS</div>
+        <div class="talk-body">
+          <h3 class="talk-title">Dati da un'API</h3>
+          <p class="talk-text">Caricare dati da un server e mostrarli nella pagina.</p>
+          <div class="talk-meta">
+            <span>14:00</span>
+            <span>Aula 1</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

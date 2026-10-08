@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+  Soluzione · Esercizio 06 · Il form: stati e valori arbitrari
+
+  Ogni variante (hover:, focus:, active:, disabled:, placeholder:) applica la sua utility solo
+  in quello stato. focus:outline-none toglie il contorno del browser, che il ring sostituisce.
+  I valori tra parentesi quadre (text-[28px], max-w-[45ch]) escono dalla scala: senza spazi.
+-->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TW Day 2027 · 06 Il form: stati e valori arbitrari</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-stone-100 p-10">
+  <section id="iscrizione" class="max-w-xl mx-auto bg-white rounded-2xl shadow p-8">
+    <h2 class="text-[28px] font-bold text-stone-900">Resta aggiornato</h2>
+    <p class="mt-2 max-w-[45ch] text-stone-600">Ti scriviamo solo quando esce il programma completo.</p>
+    <form action="#" class="mt-6 flex gap-3">
+      <label for="email" class="sr-only">Email</label>
+      <input id="email" type="email" placeholder="nome@esempio.it" class="flex-1 border border-stone-300 rounded-lg px-4 py-2 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-teal-500">
+      <button type="submit" class="px-5 py-2 rounded-lg bg-teal-700 text-white font-semibold transition hover:bg-teal-800 active:scale-95">Iscriviti</button>
+    </form>
+    <button type="button" disabled class="mt-4 px-5 py-2 rounded-lg bg-teal-700 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed">Workshop al completo</button>
+  </section>
+</body>
+</html>
